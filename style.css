@@ -1,0 +1,261 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  font-family: Arial, sans-serif;
+
+  /* Romantic background */
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+}
+
+/* =========================================
+   QUOTE BOX
+========================================= */
+
+.quote-box {
+  width: 100%;
+  max-width: 650px;
+
+  padding: 45px 40px;
+
+  text-align: center;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.quote-box h2 {
+  color: white;
+
+  font-size: 32px;
+
+  margin-bottom: 35px;
+
+  font-weight: 700;
+}
+
+/* Heart after title */
+
+.quote-box h2::after {
+  content: " ❤️";
+
+  font-size: 25px;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote {
+  color: white;
+
+  font-size: 27px;
+
+  line-height: 1.6;
+
+  font-style: italic;
+
+  margin-bottom: 20px;
+
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   AUTHOR
+========================================= */
+
+.author {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 18px;
+
+  margin-bottom: 35px;
+}
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   NEW QUOTE BUTTON
+========================================= */
+
+#quoteBtn {
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  background: white;
+
+  color: #ff4f81;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+
+#quoteBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Click */
+
+#quoteBtn:active {
+  transform: scale(0.95);
+}
+
+/* Heart icon */
+
+#quoteBtn i {
+  margin-right: 7px;
+}
+
+/* =========================================
+   INSTAGRAM BUTTON
+========================================= */
+
+.instagram-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  transition: all 0.3s ease;
+}
+
+/* Instagram hover */
+
+.instagram-btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.35);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Instagram icon */
+
+.instagram-btn i {
+  font-size: 17px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .quote-box {
+    padding: 35px 25px;
+
+    border-radius: 20px;
+  }
+
+  .quote-box h2 {
+    font-size: 26px;
+  }
+
+  .quote {
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    min-height: 120px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+
+  /* Make buttons full width on phone */
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  #quoteBtn,
+  .instagram-btn {
+    width: 100%;
+  }
+}
